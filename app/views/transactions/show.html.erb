@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>User:</h1>
+  <%= transaction.user %>
+</p>
+
+<p>
+  <h1>User:</h1>
+  <%= transaction.offer %>
+</P>
+
+<p>
+  <h1>User:</h1>
+  <%= transaction.item_price %>
+</P>
+
+<%= link_to 'Edit', edit_transacion_path(@transaction) %>
+<%= link_to 'Back', transactions_path(@transaction) %>
