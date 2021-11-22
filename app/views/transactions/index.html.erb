@@ -1,0 +1,27 @@
+<h1>Transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Offer</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each do |transaction|%>
+      <tr>
+        <td><%= transaction.user_id %></td>
+        <td><%= transaction.offer_id %></td>
+        <td><%= transaction.item_price %></td>
+        <td><%= link_to 'Show', transaction %></td>
+        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+        <td><%= link_to 'Destroy', transaction, method: :delete, data: %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Transaction', new_transaction_path %>
