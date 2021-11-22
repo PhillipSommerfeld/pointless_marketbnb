@@ -3,8 +3,8 @@
 #
 # Examples:
 
-User.destroy_all
-Offer.destroy_all
+Offer.delete_all
+User.delete_all
 
 10.times do
   users = User.create(
@@ -13,8 +13,10 @@ Offer.destroy_all
     address: Faker::Address.street_address
   )
   users.save
+end
 
-  users.each do |user|
+User.all.each do |user|
+  2.times do
     offers = Offer.create(
       item_name: Faker::Movie.title,
       price: rand(5..20),
