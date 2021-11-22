@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offer: one
+  user: one
+  item_price: 1
+
+two:
+  offer: two
+  user: two
+  item_price: 1
