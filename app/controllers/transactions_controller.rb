@@ -26,7 +26,7 @@ class TransactionsController < ApplicationController
 
   def destroy
     @transaction.destroy
-    redirect_to list_path(@transaction.list) #maybe redirect somewhere else?
+        #maybe redirect somewhere else?
   end
 
   private
