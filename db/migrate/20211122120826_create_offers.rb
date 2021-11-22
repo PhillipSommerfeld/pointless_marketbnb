@@ -2,7 +2,7 @@ class CreateOffers < ActiveRecord::Migration[6.1]
   def change
     create_table :offers do |t|
       t.string :item_name
-      t.integer :price
+      t.float :price
       t.string :image_url
       t.string :description
       t.integer :quantity
