@@ -1,0 +1,15 @@
+
+<div class = "Container">
+  <div class = "image_show"><%= image_tag("#{@offer.image_url}") %></div>
+
+  <div class = "Textbox_show">
+  <h1> <%= @offer.item_name %> </h1>
+  <p> <%= @offer.description %> </p>
+  <p> <%= "#{@offer.price}€" %> </p>
+  <% if @offer.quantity.to_i == 0 %>
+    <p> <%= "Sorry we do not have this item in stock" %> </p>
+  <% else %>
+    <p> <%=  "#{@offer.quantity} left in stock"%> </p>
+  <% end %>
+  </div>
+</div>
